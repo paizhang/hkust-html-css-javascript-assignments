@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Dating Site</title>
+    <style>
+        fieldset {background: lightyellow; border: 10px solid yellow; margin-bottom: 10px; width: 720px}
+        label {width: 180px; display: inline-block; text-align: right}
+        .checkbox_or_range {width: auto}
+        .range_left {text-align: center; background: yellow}
+        .range_right {text-align: center; background: lightblue}
+        textarea {width: 360px; height: 50px}
+        label:hover {font-size:20px}
+        input:hover {font-size: 20px}
+    </style>
 </head>
 <body>
     <h1>Please Enter Your Detail For Our Dating Website</h1>
@@ -39,25 +49,26 @@
         </fieldset>
         <fieldset>
             <legend>Your Indicators</legend>
-            <label for="height">Height</label>
-            Short <input type="range" id="height" name="height" min="0" max="100" value="50"> Tall <br>
-            <label for="salary">Salary</label>
-            Poor <input type="range" id="salary" name="salary" min="0" max="100" value="50"> Rich <br>
+            <label for="height">Height:</label>
+            <label for="height" class="checkbox_or_range range_left">Short</label> <input type="range" id="height" name="height" min="0" max="100" value="50"> <label class="checkbox_or_range range_right" for="height">Tall</label> <br>
+            <label for="salary">Salary:</label>
+            <label for="salary" class="checkbox_or_range range_left">Poor</label> <input type="range" id="salary" name="salary" min="0" max="100" value="50"> <label class="checkbox_or_range range_right" for="salary">Rich</label> <br>
         </fieldset>
         <fieldset>
             <legend>Your Contact Information</legend>
-            <label for="email">Email</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required> <br>
-            <label>Mobile</label>
+            <label>Mobile:</label>
             <input type="tel" id="mobile" name="mobile"> <br>
-            <label for="address">Address</label>
-            <textarea name="address" id="address" cols="20" rows="2"></textarea> <br>
-            <label for="byemail">Method to contact you</label>
-            <input type="checkbox" name="contact_method" id="byemail" value="email"> <label for="byemail">Email</label>
-            <input type="checkbox" name="contact_method" id="bywhatsapp" value="whatsapp"> <label for="bywhatsapp"> Whatsapp </label>
-            <input type="checkbox" name="contact_method" id="byinapp" value="inapp"> <label for="bywhatsapp">In-app chat</label>
+            <label for="address">Address:</label>
+            <textarea name="address" id="address"></textarea> <br>
+            <label for="byemail">Method to contact you:</label>
+            <input type="checkbox" name="contact_method" id="byemail" value="email"> <label for="byemail" class="checkbox_or_range">Email</label>
+            <input type="checkbox" name="contact_method" id="bywhatsapp" value="whatsapp"> <label for="bywhatsapp" class="checkbox_or_range"> Whatsapp </label>
+            <input type="checkbox" name="contact_method" id="byinapp" value="inapp"> <label for="bywhatsapp" class="checkbox_or_range">In-app chat</label>
         </fieldset>
         <input type="submit" value="Send">
     </form>
+    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 </body>
 </html>
