@@ -8,12 +8,28 @@
         div {position: absolute; width: 500px; height: 500px}
         #rightSide {left: 500px; border-left: 1px solid black}
     </style>
+    <script>
+        function generateFaces() {
+            var numberOfFaces = 5;
+            var theLeftSide = document.getElementById("leftSide");
+            var i = 0;
+            while (i < numberOfFaces) {
+                var image = document.createElement('img');
+                image.src = "smile.png";
+                image.style.top = Math.random() * 400 + "px";
+                image.style.left = Math.random() * 400 + "px";
+                theLeftSide.appendChild(image);
+                console.log(theLeftSide);
+                i++;
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="generateFaces()">
     <h1>Matching Game</h1>
     <p>Click on the extra smiling face on the left.</p>
     <div id="leftSide"></div>
     <div id="rightSide"></div>
-    
+
 </body>
 </html>
