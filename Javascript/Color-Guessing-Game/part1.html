@@ -10,7 +10,7 @@
         function do_game() {
             target_number = Math.floor(Math.random() * 8);
             target = colors[target_number];
-            alert(target);
+            alert("The target color is " + target);
             while (!finished) {
                 guess_color = prompt("I am thinking of one of these colors: \n\n" + colors.join() + "\n\n" + "What color I am thinking of?")
                 if (guess_color == target)
